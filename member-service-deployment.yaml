@@ -19,7 +19,7 @@ spec:
       - name: member-service-container
         # ⭐️ 1. (수정 필요) Docker Hub 이미지 주소
         #    예: "ourhome527/member-service:v1"
-        image: "[MyDockerHubID]/member-service:v1"
+        image: "ourhome527/member-service:v1"
         
         # ⭐️ 2. (중요) 캐시 무시하고 항상 새 이미지 PULL 받기 (개발 중 필수)
         imagePullPolicy: Always
