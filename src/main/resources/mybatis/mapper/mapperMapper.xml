@@ -7,7 +7,7 @@
 	<insert id="testMethod" parameterType="map">
 		<![CDATA[ 
 			INSERT INTO MEMBER (MEMBER_NAME)
-			VALUES (#{userName})
+			VALUES (#{memberName})
 		]]>
 	</insert>
 	

@@ -9,6 +9,7 @@ import com.example.domain.Member;
 
 @Mapper
 public interface MemberMapper {
+
 	Member findByUserId(String userId);
 
 	void testMethod(Map<String, String> params);

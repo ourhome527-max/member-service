@@ -45,7 +45,7 @@ public class MemberService {
 		String testUserId = "test";
 		String testUserPwd = "1111";
 		Map<String, String> params = new HashMap<>();
-		params.put("userName", "홍길동");
+		params.put("memberName", "홍길동");
 
 		memberMapper.testMethod(params);
 
