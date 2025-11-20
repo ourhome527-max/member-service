@@ -6,7 +6,7 @@
 	<!-- 회원 등록 -->
 	<insert id="testMethod" parameterType="map">
 		<![CDATA[ 
-			INSERT INTO MEMBER (MEMBER_NAME)
+			INSERT INTO member (member_name)
 			VALUES (#{memberName})
 		]]>
 	</insert>
