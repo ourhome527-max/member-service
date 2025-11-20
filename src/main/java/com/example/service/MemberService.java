@@ -1,18 +1,22 @@
 package com.example.service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.stereotype.Service;
 
 import com.example.domain.Member;
 import com.example.domain.dto.UserLoginReq;
+import com.example.mapper.MemberMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
-//@RequiredArgsConstructor
+@RequiredArgsConstructor
 @Slf4j
 public class MemberService {
-	//private final MemberMapper memberMapper;
+	private final MemberMapper memberMapper;
 
 	/*
 	 * 로그인 처리
@@ -40,6 +44,10 @@ public class MemberService {
 	public Member login(UserLoginReq request) {
 		String testUserId = "test";
 		String testUserPwd = "1111";
+		Map<String, String> params = new HashMap<>();
+		params.put("userName", "홍길동");
+
+		memberMapper.testMethod(params);
 
 		if (testUserId.equals(request.getUserId()) && testUserPwd.equals(request.getUserPwd())) {
 			return new Member("test", "1111", "홍길동");
