@@ -11,4 +11,12 @@
 		]]>
 	</insert>
 	
+	<!-- 회원 등록 -->
+	<insert id="testRegist" parameterType="com.example.domain.dto.RegistMemberReq">
+		<![CDATA[ 
+			INSERT INTO member (member_id, member_pwd, member_name)
+			VALUES (#{memberId}, #{memberPwd}, #{memberName})
+		]]>
+	</insert>
+	
 </mapper>

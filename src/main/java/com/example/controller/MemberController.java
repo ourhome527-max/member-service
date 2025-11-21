@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.domain.Member;
+import com.example.domain.dto.RegistMemberReq;
 import com.example.domain.dto.UserLoginReq;
 import com.example.service.MemberService;
 
@@ -22,6 +23,15 @@ public class MemberController {
 	private final MemberService memberService;
 
 	// 회원 가입
+	@PostMapping("/regist")
+	public ResponseEntity registMember(@RequestBody RegistMemberReq request) {
+		int result = memberService.registMember(request);
+		if (result > 0) {
+			return ResponseEntity.ok(null);
+		} else {
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+		}
+	}
 
 	// 로그인
 	@PostMapping("/login")

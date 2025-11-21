@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 import com.example.domain.Member;
+import com.example.domain.dto.RegistMemberReq;
 import com.example.domain.dto.UserLoginReq;
 import com.example.mapper.MemberMapper;
 
@@ -53,5 +54,9 @@ public class MemberService {
 			return new Member("test", "1111", "홍길동");
 		}
 		return null;
+	}
+	
+	public int registMember(RegistMemberReq request) {
+		return memberMapper.testRegist(request);
 	}
 }
