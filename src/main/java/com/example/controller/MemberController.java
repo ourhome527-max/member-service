@@ -40,8 +40,10 @@ public class MemberController {
 		log.info("request: {}", request);
 		Member loginMember = memberService.login(request);
 		if (loginMember != null) {
+			log.info("login success");
 			return ResponseEntity.ok(loginMember);
 		} else {
+			log.info("login failed");
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 		}
 	}
