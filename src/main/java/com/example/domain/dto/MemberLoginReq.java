@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserLoginReq {
-	private String userId;
-	private String userPwd;
+public class MemberLoginReq {
+	private String memberId;
+	private String memberPwd;
 }

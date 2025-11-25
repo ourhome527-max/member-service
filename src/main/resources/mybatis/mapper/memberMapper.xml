@@ -19,4 +19,13 @@
 		]]>
 	</insert>
 	
+	<!-- 회원 정보 조회 -->
+	<select id="selectMemberById" parameterType="String">
+		<![CDATA[ 
+			SELECT *
+			FROM member
+			WHERE member_id = #{memberId}
+		]]>	
+	</select>
+
 </mapper>

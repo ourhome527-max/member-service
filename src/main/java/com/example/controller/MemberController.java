@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.domain.Member;
 import com.example.domain.dto.RegistMemberReq;
-import com.example.domain.dto.UserLoginReq;
+import com.example.domain.dto.MemberLoginReq;
 import com.example.service.MemberService;
 
 import lombok.RequiredArgsConstructor;
@@ -36,7 +36,7 @@ public class MemberController {
 
 	// 로그인
 	@PostMapping("/login")
-	public ResponseEntity<Member> login(@RequestBody UserLoginReq request) {
+	public ResponseEntity<Member> login(@RequestBody MemberLoginReq request) {
 		Member loginMember = memberService.login(request);
 		if (loginMember != null) {
 			return ResponseEntity.ok(loginMember);

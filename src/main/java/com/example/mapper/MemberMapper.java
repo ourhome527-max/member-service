@@ -11,5 +11,9 @@ import com.example.domain.dto.RegistMemberReq;
 @Mapper
 public interface MemberMapper {
 	void testMethod(Map<String, String> params);
+
 	int testRegist(RegistMemberReq request);
+
+	// 회원 정보 조회
+	Member selectMemberById(String memberId);
 }
