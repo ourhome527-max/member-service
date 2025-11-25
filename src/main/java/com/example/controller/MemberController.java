@@ -25,6 +25,7 @@ public class MemberController {
 	// 회원 가입
 	@PostMapping("/regist")
 	public ResponseEntity registMember(@RequestBody RegistMemberReq request) {
+		log.info("request: {}", request);
 		int result = memberService.registMember(request);
 		if (result > 0) {
 			return ResponseEntity.ok(null);
