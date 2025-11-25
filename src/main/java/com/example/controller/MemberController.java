@@ -37,6 +37,7 @@ public class MemberController {
 	// 로그인
 	@PostMapping("/login")
 	public ResponseEntity<Member> login(@RequestBody MemberLoginReq request) {
+		log.info("request: {}", request);
 		Member loginMember = memberService.login(request);
 		if (loginMember != null) {
 			return ResponseEntity.ok(loginMember);
